@@ -4,8 +4,10 @@
 
     Theme name: Apaxy
     Theme author: @adamwhitcroft
+
+    Edited by Vaclav Navratil
 \*------------------------------------*/
-@import url('//fonts.googleapis.com/css?family=Open+Sans');
+@import url('//fonts.googleapis.com/css?family=Roboto+Condensed');
 /* Have to use @import for the font, as you can only specify a single stylesheet */
 * {
 	margin:0;
@@ -17,23 +19,24 @@
 
 html {
 	min-height:100%;
-	border-top:10px solid #ECEEF1;
-	border-bottom:10px solid #ECEEF1;
+	border-top:10px solid #343433;
+	border-bottom:10px solid #343433;
 	color:#61666c;
 	font-weight:400;
-	font-size:1em;
-	font-family:'Open Sans', sans-serif;
+	font-size:1.2em;
+	font-family:'Roboto Condensed', sans-serif;
 	line-height:2em;
 }
 body {
 	padding:20px;
 	-webkit-backface-visibility:hidden;
+	background-color: #F7F7F7;
 }
 code {
 	font-family:consolas,monospace;	
 }
 a {
-	color:#61666c;
+	color:#2ea3f2;
 	text-decoration:none;
 }
 a, img {
@@ -41,15 +44,17 @@ a, img {
         outline:none
 }
 a:hover {
-	color:#2a2a2a;
+	color:#0d80ce;
 }
 /*------------------------------------*\
     Wrapper
 \*------------------------------------*/
 .wrapper {
 	margin:0 auto;
-	padding-top:20px;
+	padding:10px 15px 0;
 	max-width:80%;
+	background-color: white;
+	border-radius: 8px;
 }
 /*------------------------------------*\
     Demo block
@@ -110,17 +115,39 @@ td {
 }
 td a{
 	display: block;
+	color: #61666c;
 }
-tr.parent a[href^="/"] {
+a.directory {
 	color:#9099A3;
 }
-	.parent a[href^="/"]:hover {
-		color:#2281d0;
-	}
+a.directory:hover {
+	color:#2ea3f2;
+}
 /*------------------------------------*\
     Footer
 \*------------------------------------*/
 .footer {
 	text-align:center;
 	font-size:.75em;
+}
+
+.logo a {
+	display: block;
+	background-image: url("http://www.freenas.org/wp-content/uploads/logo_flat_V3.png");
+	width: 170px;
+	height: 83px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	margin-bottom: 15px;
+}
+
+.logo.corral a {
+        background-image: url("http://web.freenas.org/wp-content/uploads/FreeNAS_Corral_Logo-1.png");
+        width: 241px;
+        height: 83px;
+}
+
+
+.logo span {
+	display: none;
 }

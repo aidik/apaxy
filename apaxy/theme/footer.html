@@ -1,23 +1,37 @@
-	<div class="block">
-		You can add your own HTML above or below the directory listing. Simply explore the <code>header.html</code> and <code>footer.html</code> files.
-	</div><!--/.postlisting-->
 
-</div><!--/.wrapper-->
+<div class="block">
+		Unless you know, what specific version you want, please use <a href="http://www.freenas.org/download-freenas-release/">FreeNAS Official Download Page</a> for current releases.
+	</div>
+
+
+</div>
 
 <div class="footer">
-	Apaxy by <a href="https://twitter.com/adamwhitcroft">@adamwhitcroft</a>
+	&copy;Copyright 2017 <a href="https://www.ixsystems.com">iXsystems</a>, Inc. | All Rights Reserved
 </div><!--/.footer-->
 <script type="text/javascript">
 // grab the 2nd child and add the parent class. tr:nth-child(2)
-document.getElementsByTagName('tr')[1].className = 'parent';
+//document.getElementsByTagName('tr')[1].className = 'parent';
 // fix links when not adding a / at the end of the URI
-var uri = window.location.pathname.substr(1);
-if (uri.substring(uri.length-1) != '/'){
-	var indexes = document.getElementsByClassName('indexcolname'),
-	i = indexes.length;
-	while (i--){
-	    var a = indexes[i].getElementsByTagName('a')[0];
-	    a.href = '/' + uri + '/' + a.getAttribute('href',2);
-	}
-}
+//var uri = window.location.pathname.substr(1);
+//if (uri.substring(uri.length-1) != '/'){
+//	var indexes = document.getElementsByClassName('indexcolname'),
+//	i = indexes.length;
+//	while (i--){
+//	    var a = indexes[i].getElementsByTagName('a')[0];
+//	    a.href = '/' + uri + '/' + a.getAttribute('href',2);
+//	}
+//}
 </script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+	$('img[alt="[DIR]"], img[alt="[PARENTDIR]"]').parents("tr").find("a").addClass("directory");
+	if ( document.location.href.toLowerCase().indexOf("corral") > -1 ) {
+		$("h1.logo").addClass("corral");
+	}
+	
+});
+</script>
+
